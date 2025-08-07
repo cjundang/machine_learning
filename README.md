@@ -11,9 +11,9 @@ Supervised learning involves training a model on a labeled dataset, where the ta
 
 **Equation:**
 
-\[
+$$
 h_\theta(x) = \frac{1}{1 + e^{-\theta^T x}}
-\]
+$$
 
 **Python:**
 ```python

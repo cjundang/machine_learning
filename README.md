@@ -27,9 +27,9 @@ predictions = model.predict(X_test)
 
 **Equation:**
 
-\[
+$$
 d(x, x_i) = \sqrt{\sum_{j=1}^{n} (x_j - x_{ij})^2}
-\]
+$$
 
 **Python:**
 ```python
@@ -42,9 +42,9 @@ model.fit(X_train, y_train)
 
 **Equation:**
 
-\[
+$$
 \min \frac{1}{2} ||w||^2 \text{ subject to } y_i(w^T x_i + b) \geq 1
-\]
+$$
 
 **Python:**
 ```python
@@ -57,9 +57,9 @@ model.fit(X_train, y_train)
 
 **Metric (Entropy):**
 
-\[
+$$
 H(D) = - \sum_{i=1}^{k} p_i \log_2 p_i
-\]
+$$
 
 **Python:**
 ```python
@@ -72,9 +72,9 @@ model.fit(X_train, y_train)
 
 **Equation:**
 
-\[
+$$
 P(y|x) \propto P(y) \prod_{i=1}^n P(x_i|y)
-\]
+$$
 
 **Python:**
 ```python
@@ -89,9 +89,9 @@ model.fit(X_train, y_train)
 
 **Equation:**
 
-\[
+$$
 y = \beta_0 + \beta_1 x_1 + \dots + \beta_n x_n + \epsilon
-\]
+$$
 
 **Python:**
 ```python
@@ -116,15 +116,15 @@ model.fit(X_train, y_train)
 
 **Ridge Equation:**
 
-\[
+$$
 \text{Loss} = MSE + \lambda \sum_{j=1}^n \beta_j^2
-\]
+$$
 
 **Lasso Equation:**
 
-\[
+$$
 \text{Loss} = MSE + \lambda \sum_{j=1}^n |\beta_j|
-\]
+$$
 
 **Python:**
 ```python
@@ -141,9 +141,9 @@ lasso = Lasso(alpha=0.1).fit(X_train, y_train)
 
 **Objective:**
 
-\[
+$$
 \text{SSE} = \sum_{i=1}^{n} \sum_{k=1}^{K} \mathbb{1}(c_i = k) \|x_i - \mu_k\|^2
-\]
+$$
 
 **Python:**
 ```python
@@ -296,9 +296,9 @@ Reinforcement Learning (RL) is a type of machine learning where an agent learns 
 
 **Update Rule:**
 
-\[
+$$
 Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \left[ r_t + \gamma \max_a Q(s_{t+1}, a) - Q(s_t, a_t) \right]
-\]
+$$
 
 **Python:**
 ```python
@@ -319,9 +319,9 @@ for episode in range(episodes):
 
 **Update Rule:**
 
-\[
+$$
 Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [r_t + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t)]
-\]
+$$
 
 ---
 
@@ -347,9 +347,9 @@ for episode in range(episodes):
 
 **Gradient:**
 
-\[
+$$
 \nabla_\theta J(\theta) = \mathbb{E}_{\pi_\theta} \left[ \nabla_\theta \log \pi_\theta(a_t|s_t) R_t \right]
-\]
+$$
 
 **Python (Pseudo):**
 ```python
@@ -368,9 +368,9 @@ loss = -sum([log_prob * R for log_prob, R in zip(log_probs, discounted_rewards)]
 
 **Update:**
 
-\[
+$$
 \nabla_\theta J(\theta) \approx \nabla_\theta \log \pi_\theta(a_t|s_t) \cdot (R_t - V(s_t))
-\]
+$$
 
 ---
 
@@ -384,9 +384,9 @@ Deep Learning uses multiple layers of neurons to extract hierarchical features.
 
 **Equation:**
 
-\[
+$$
 a = f(Wx + b)
-\]
+$$
 
 **Python:**
 ```python
@@ -406,9 +406,9 @@ model = Sequential([
 
 **Equation:**
 
-\[
+$$
 S(i,j) = (X * K)(i,j) = \sum_m \sum_n X(i+m, j+n) K(m,n)
-\]
+$$
 
 **Python:**
 ```python
@@ -429,14 +429,14 @@ model = Sequential([
 
 **Equation (LSTM):**
 
-\[
+$$
 f_t = \sigma(W_f[h_{t-1}, x_t] + b_f) \\
 i_t = \sigma(W_i[h_{t-1}, x_t] + b_i) \\
 \tilde{C}_t = \tanh(W_C[h_{t-1}, x_t] + b_C) \\
 C_t = f_t * C_{t-1} + i_t * \tilde{C}_t \\
 o_t = \sigma(W_o[h_{t-1}, x_t] + b_o) \\
 h_t = o_t * \tanh(C_t)
-\]
+$$
 
 **Python:**
 ```python
@@ -455,9 +455,9 @@ model = Sequential([
 
 **Loss Function:**
 
-\[
+$$
 L = \|x - \hat{x}\|^2
-\]
+$$
 
 **Python:**
 ```python
@@ -479,9 +479,9 @@ autoencoder.fit(X, X, epochs=20)
 
 **Objective Function:**
 
-\[
+$$
 \min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log(1 - D(G(z)))]
-\]
+$$
 
 **Python:**
 ```python
